@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <canvas id="stars"></canvas>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <script>
+      const canvas = document.getElementById("stars");
+      const ctx = canvas.getContext("2d");
+
+      let screen,
+        stars,
+        params = { speed: 0.1, number: 300, extinction: 4 };
+      setupStars();
+      updateStars();
+
+      // update stars on resize to keep the thing centered
+      window.onresize = function () {
+        setupStars();
+      };
+
+      // star constructor
+      function Star() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.z = Math.random() * canvas.width;
+
+        this.move = function () {
+          this.z -= params.speed;
+          if (this.z <= 0) {
+            this.z = canvas.width;
+          }
+        };
+
+        this.show = function () {
+          let x, y, rad, opacity;
+          x = (this.x - screen.c[0]) * (canvas.width / this.z);
+          x = x + screen.c[0];
+          y = (this.y - screen.c[1]) * (canvas.width / this.z);
+          y = y + screen.c[1];
+          rad = canvas.width / this.z;
+          opacity =
+            rad > params.extinction ? 1.5 * (2 - rad / params.extinction) : 1;
+
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(255, 255, 255, " + opacity + ")";
+          ctx.arc(x, y, rad, 0, Math.PI * 2);
+          ctx.fill();
+        };
+      }
+
+      // setup <canvas>, create all the starts
+      function setupStars() {
+        screen = {
+          w: window.innerWidth,
+          h: window.innerHeight,
+          c: [window.innerWidth * 0.5, window.innerHeight * 0.5],
+        };
+        window.cancelAnimationFrame(updateStars);
+        canvas.width = screen.w;
+        canvas.height = screen.h;
+        stars = [];
+        for (let i = 0; i < params.number; i++) {
+          stars[i] = new Star();
+        }
+      }
+
+      function updateStars() {
+        ctx.fillStyle = "rgb(26,26,29)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        stars.forEach(function (s) {
+          s.show();
+          s.move();
+        });
+        window.requestAnimationFrame(updateStars);
+      }
+    </script>
+  </body>
+</html>
