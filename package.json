@@ -1,7 +1,7 @@
 {
-  "name": "portfolio_23",
+  "name": "Rafael_Portfolio",
   "version": "0.1.0",
-  "homepage": "https://NonPlusGames.github.io/portfolio_23",
+  "homepage": "https://PhotonMoton.github.io/Rafael_Portfolio",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
