@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/Rafael_Portfolio/static/css/main.5cace4d2.css",
+    "main.js": "/Rafael_Portfolio/static/js/main.ca6c510e.js",
+    "static/js/787.0c9bb5fb.chunk.js": "/Rafael_Portfolio/static/js/787.0c9bb5fb.chunk.js",
+    "static/media/Rafael.png": "/Rafael_Portfolio/static/media/Rafael.bbae58a91b2a5a991ec3.png",
+    "static/media/SMITH.png": "/Rafael_Portfolio/static/media/SMITH.7d1b2092361c76631956.png",
+    "static/media/resume.jpg": "/Rafael_Portfolio/static/media/resume.185c44723a62aaefe89f.jpg",
+    "static/media/logo_adobe.png": "/Rafael_Portfolio/static/media/logo_adobe.855ad08a0406de540af7.png",
+    "static/media/logo_react.png": "/Rafael_Portfolio/static/media/logo_react.6bcffb56bd0efaa47767.png",
+    "static/media/CLOUD.jpg": "/Rafael_Portfolio/static/media/CLOUD.494b8b5f7946d8d14902.jpg",
+    "static/media/logo_python.png": "/Rafael_Portfolio/static/media/logo_python.31458d63fbf75be790fe.png",
+    "static/media/Rafael_Resume.pdf": "/Rafael_Portfolio/static/media/Rafael_Resume.4333e73bc8fd96c2a01a.pdf",
+    "static/media/ICON_WEB.png": "/Rafael_Portfolio/static/media/ICON_WEB.55cad8a5290643238d03.png",
+    "static/media/logo_barnard.jpg": "/Rafael_Portfolio/static/media/logo_barnard.ce995a7c0bd129ac933c.jpg",
+    "static/media/logo_amnh.jpg": "/Rafael_Portfolio/static/media/logo_amnh.3097bba758b3dece2ed6.jpg",
+    "static/media/ICON_GAME.png": "/Rafael_Portfolio/static/media/ICON_GAME.63826b9969e3f117a5af.png",
+    "static/media/ICON_RESUME.png": "/Rafael_Portfolio/static/media/ICON_RESUME.21c64d27b5db710e4885.png",
+    "static/media/logo_html.png": "/Rafael_Portfolio/static/media/logo_html.aab59987a376edab2034.png",
+    "static/media/logo_smith.webp": "/Rafael_Portfolio/static/media/logo_smith.0d5e95bb5ccffb1f8331.webp",
+    "static/media/logo_cloud.png": "/Rafael_Portfolio/static/media/logo_cloud.7c70bfa6782c2493507a.png",
+    "static/media/logo_java.jpg": "/Rafael_Portfolio/static/media/logo_java.029406128ce3829958f8.jpg",
+    "static/media/logo_GM.jpg": "/Rafael_Portfolio/static/media/logo_GM.b3a9cf55e04982d4e970.jpg",
+    "static/media/logo_csharp.png": "/Rafael_Portfolio/static/media/logo_csharp.fc430729bfa8902c06fd.png",
+    "static/media/logo_citadel.webp": "/Rafael_Portfolio/static/media/logo_citadel.6261f788b107a5032c31.webp",
+    "index.html": "/Rafael_Portfolio/index.html",
+    "main.5cace4d2.css.map": "/Rafael_Portfolio/static/css/main.5cace4d2.css.map",
+    "main.ca6c510e.js.map": "/Rafael_Portfolio/static/js/main.ca6c510e.js.map",
+    "787.0c9bb5fb.chunk.js.map": "/Rafael_Portfolio/static/js/787.0c9bb5fb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5cace4d2.css",
+    "static/js/main.ca6c510e.js"
+  ]
+}
